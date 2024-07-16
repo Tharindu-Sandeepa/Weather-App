@@ -1,0 +1,50 @@
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, #1c1c5e 0%, #53cced 100%);
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: #effb85;
+    width: 4px; 
+    height: 4px; 
+    border-radius: 50%;
+    animation: twinklingStars 20s linear infinite;
+  }
+  
+  @keyframes twinklingStars {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-1000px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sun-info {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
